@@ -15,6 +15,7 @@ public class ColorWheelSensorRiseComand extends CommandBase {
    */
   public ColorWheelSensorRiseComand() {
     // Use addRequirements() here to declare subsystem dependencies.
+
   }
 
   // Called when the command is initially scheduled.

@@ -16,4 +16,12 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+    public final class colorWheelConstants{
+        public final static double ActuatorPower = .2;
+        public final static double RotatingPower = .2;
+        public final static int ActuatingMotorID = 0;
+        public final static int RotatingMotorID = 1;
+        public final static int RotateDistance = 20480;
+        public final static int ColorWheelHeight = 8492;
+    }
 }
