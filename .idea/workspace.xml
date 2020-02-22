@@ -38,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Gradle.2020Robot [deploy]">
+  <component name="RunManager" selected="Gradle.2020Robot">
     <configuration name="2020Robot [build]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -77,10 +77,33 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="2020Robot" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Gradle.2020Robot [build]" />
       <item itemvalue="Gradle.2020Robot [deploy]" />
+      <item itemvalue="Gradle.2020Robot" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.2020Robot" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -100,6 +123,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1581808963271" />
+    <state width="661" height="223" key="GridCell.Tab.0.bottom" timestamp="1582337286486">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582337286486" />
+    <state width="661" height="223" key="GridCell.Tab.0.center" timestamp="1582337286485">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582337286485" />
+    <state width="661" height="223" key="GridCell.Tab.0.left" timestamp="1582337286485">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582337286485" />
+    <state width="661" height="223" key="GridCell.Tab.0.right" timestamp="1582337286485">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582337286485" />
+    <state width="661" height="223" key="GridCell.Tab.1.bottom" timestamp="1582337286486">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582337286486" />
+    <state width="661" height="223" key="GridCell.Tab.1.center" timestamp="1582337286486">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582337286486" />
+    <state width="661" height="223" key="GridCell.Tab.1.left" timestamp="1582337286486">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582337286486" />
+    <state width="661" height="223" key="GridCell.Tab.1.right" timestamp="1582337286486">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582337286486" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1581808193661">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -112,5 +167,8 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581808190038" />
+  </component>
+  <component name="WpiLibVersionService">
+    <option name="lastChecked" value="20200221175921" />
   </component>
 </project>

@@ -7,13 +7,29 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants.IntakeConstants;
+//import com.revrobotics.CANSparkMax;
+//import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class IntakeSubsystem extends SubsystemBase {
+ // CANSparkMax actuatingMotor = new CANSparkMax(IntakeConstants.actuateMotorID, MotorType.kBrushless);
+  WPI_TalonSRX IntakingMotor = new WPI_TalonSRX(IntakeConstants.intakeMotorID);
   /**
    * Creates a new IntakeSubsystem.
    */
   public IntakeSubsystem() {
+      topMagneticLimitSwitch = new DigitalInput();
+      bottomMagneticLimitSwitch = new DigitalInput();
+      
+    
+  }
+
+
+  void Extend(){
 
   }
 

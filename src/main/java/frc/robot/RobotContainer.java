@@ -7,11 +7,22 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
+import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
+
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.Constants.OI_Constants;
+import frc.robot.commands.ArcadeDriveCommand;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.TankDriveCommand;
+import frc.robot.subsystems.DriveTrainSubsystem;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+
+
 
 /**
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -22,9 +33,13 @@ import edu.wpi.first.wpilibj2.command.Command;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-
+  private final DriveTrainSubsystem m_DriveTrainSubsystem = DriveTrainSubsystem.getInstance();
+  private final TankDriveCommand m_TankDriveCommand = new TankDriveCommand(m_DriveTrainSubsystem);
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
-
+  private final Joystick m_Joystick = new Joystick(OI_Constants.joystickPort);
+  private final JoystickButton m_driveButton = new JoystickButton(m_Joystick, OI_Constants.driveJoystickButtonID);
+  private final ArcadeDriveCommand m_ArcadeDriveCommand = new ArcadeDriveCommand(m_DriveTrainSubsystem);
+  
 
 
   /**
@@ -42,6 +57,7 @@ public class RobotContainer {
    * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+    m_DriveTrainSubsystem.setDefaultCommand(m_ArcadeDriveCommand);
   }
 
 
