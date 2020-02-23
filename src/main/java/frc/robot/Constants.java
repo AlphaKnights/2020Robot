@@ -62,9 +62,17 @@ public final class Constants {
     }
 
     public final class robotLiftSubsystem{
-        public static final int Talon1 = 0;
-        public static final int Talon2 = 1;
-        public static final int Talon3 = 2;
-        
+        public static final double ScfoldingSpeed = 0.3;
+        public static final double WinchingSpeed = 0.2;
+        public static final int ScfoldingTalonID = 0;
+        public static final int WinchLeftTalonID = 1;
+        public static final int WinchRightTalonID = 2;
+        public static final int OneRotationValue = 4096;
+        public static final int ScafoldingRotationsToTop = 8;
+        public static final int RotationsValue = OneRotationValue*ScafoldingRotationsToTop;
+        public static final int RotationsToStart = 2;
+        public static final int StartLiftHeight = RotationsToStart*OneRotationValue;
+        public static final int liftJoystickButtonID = 1;
     }
+
 }

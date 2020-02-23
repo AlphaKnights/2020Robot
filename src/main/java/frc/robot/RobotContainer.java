@@ -13,11 +13,15 @@ import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.Constants.OI_Constants;
+import frc.robot.Constants.robotLiftSubsystem;
 import frc.robot.commands.ArcadeDriveCommand;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.LowerLift;
+import frc.robot.commands.RiseLift;
 import frc.robot.commands.TankDriveCommand;
 import frc.robot.subsystems.DriveTrainSubsystem;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.RobotLiftSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -39,7 +43,10 @@ public class RobotContainer {
   private final Joystick m_Joystick = new Joystick(OI_Constants.joystickPort);
   private final JoystickButton m_driveButton = new JoystickButton(m_Joystick, OI_Constants.driveJoystickButtonID);
   private final ArcadeDriveCommand m_ArcadeDriveCommand = new ArcadeDriveCommand(m_DriveTrainSubsystem);
-  
+  private final JoystickButton m_liftButton = new JoystickButton(m_Joystick, robotLiftSubsystem.liftJoystickButtonID);
+  private final RobotLiftSubsystem m_RobotLiftSubsystem = new RobotLiftSubsystem();
+  private final RiseLift m_RiseLiftCommand = new RiseLift(m_RobotLiftSubsystem);
+  private final LowerLift m_LowerLiftCommand = new LowerLift(m_RobotLiftSubsystem);
 
 
   /**
@@ -58,6 +65,8 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
     m_DriveTrainSubsystem.setDefaultCommand(m_ArcadeDriveCommand);
+    m_liftButton.whenHeld(m_RiseLiftCommand);
+    m_liftButton.whenReleased(m_LowerLiftCommand);
   }
 
 

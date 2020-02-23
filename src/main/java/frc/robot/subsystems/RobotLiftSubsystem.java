@@ -16,31 +16,35 @@ public class RobotLiftSubsystem extends SubsystemBase {
   /**
    * Creates a new RobotLiftSubsystem.
    */
-  WPI_TalonSRX Talon1 = new WPI_TalonSRX(robotLiftSubsystem.Talon1);
-  WPI_TalonSRX Talon2 = new WPI_TalonSRX(robotLiftSubsystem.Talon2);
-  WPI_TalonSRX Talon3 = new WPI_TalonSRX(robotLiftSubsystem.Talon3);
+  WPI_TalonSRX Scafolding = new WPI_TalonSRX(robotLiftSubsystem.ScfoldingTalonID);
+  WPI_TalonSRX WinchLeft = new WPI_TalonSRX(robotLiftSubsystem.WinchLeftTalonID);
+  WPI_TalonSRX WinchRight = new WPI_TalonSRX(robotLiftSubsystem.WinchRightTalonID);
   
   public RobotLiftSubsystem() {
 
   }
 
-  void extendArm(){
-  Talon1.set(0.3);
+  public void LiftHooks(){
+    if(Scafolding.getSelectedSensorPosition()<robotLiftSubsystem.RotationsValue){
+      Scafolding.set(robotLiftSubsystem.ScfoldingSpeed);
+    }
   }
 
-  void liftUp()  { 
-
+  public void RetractScafolding(){
+    if(Scafolding.getSelectedSensorPosition()>0){
+      Scafolding.set((robotLiftSubsystem.ScfoldingSpeed)*-1);
+    }
+    else if(Scafolding.getSelectedSensorPosition()<=10){
+      if(WinchLeft.getSelectedSensorPosition()<robotLiftSubsystem.StartLiftHeight){
+        WinchLeft.set(robotLiftSubsystem.WinchingSpeed);
+      }
+      if(WinchRight.getSelectedSensorPosition()<robotLiftSubsystem.StartLiftHeight){
+        WinchRight.set(robotLiftSubsystem.WinchingSpeed);
+      }
+    }
   }
 
-  void unextendArm()  {
-
-  }
-
-  void goDown()  {
-
-  }
-
-  void balance()  {
+  void Balance()  {
 
   }
   @Override
