@@ -8,13 +8,17 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.ColorWheelSubsystem;
 
 public class ColorWheelRotateCommand extends CommandBase {
   /**
    * Creates a new ColorWheelRotateCommand.
    */
-  public ColorWheelRotateCommand() {
+  ColorWheelSubsystem colorWheel;
+  public ColorWheelRotateCommand(ColorWheelSubsystem subsystem) {
+    colorWheel = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
+    addRequirements(colorWheel);
   }
 
   // Called when the command is initially scheduled.
